@@ -113,3 +113,56 @@ button:hover{
     border: 2px solid white;
 }
 
+/* Responsiveness */
+@media (min-width:320px) and (max-width:480px) {
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    .container{
+        width: 290px;
+    }   
+
+    button{
+        font-size: 15px;
+    }
+    .color-name{
+        font-size: 17px;
+    }
+    
+.tooltip-text{
+    visibility: hidden;
+    color: beige;
+    background-color: #cb9fdf;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1.5px dashed black;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    position: absolute;
+    left: 10%;
+    width: fit-content;
+    bottom: 90%;
+    z-index: 0;
+    font-size: 8px;
+}
+.tooltip-text::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top:85%;
+    left: 5%;
+    width: 10px;
+    height:10px;
+    border-left: none;
+    border-right: 1.5px dashed black;
+    border-bottom: 1.5px dashed black;
+    transform: rotate(45deg);
+    background-color: #cb9fdf;
+}
+}
